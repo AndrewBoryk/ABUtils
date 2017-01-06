@@ -1,0 +1,16 @@
+PODS:
+  - ABUtils (0.1.0)
+
+DEPENDENCIES:
+  - ABUtils (from `../`)
+
+EXTERNAL SOURCES:
+  ABUtils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ABUtils: ce40c95fd4e86a88c1d1ab08c76a8874f2990912
+
+PODFILE CHECKSUM: e4265658a872c37bf209316d44231e568dc1d8ae
+
+COCOAPODS: 1.2.0.beta.3
