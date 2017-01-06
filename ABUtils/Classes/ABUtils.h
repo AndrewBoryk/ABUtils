@@ -171,7 +171,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 #pragma mark - Image/Video Oriented
 
-// Send image, and returns same image scalled and rotated
+// Send image, and returns same image scaled to 1080px and rotated accordingly
 + (UIImage *)scaleAndRotateImage:(UIImage *)image;
 
 // Encodes image to Base 64 for Backend

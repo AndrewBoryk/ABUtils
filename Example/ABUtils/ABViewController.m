@@ -143,6 +143,18 @@
         [ABUtils printString:@"There isn't a 5 day difference."];
     }
     
+    [ABUtils printString:@"\n\n"];
+    
+    //////// NUMBER ORIENTED FUNCTIONS ////////
+    
+    // The following functions return a string formatted from a number
+    // 1. decimalNumber: Formats the number as a string with commas, accepting an NSNumber. This function should be called using a sharedInstance. Date and number formatters take up processing time, so this makes sure that the formatter used for this function is only initilized once
+    // 2. commaFormat: Uses the previous function, but accepts an int
+    // 3. commaFormatNumber: Formats the number to be a decimal with 1-3 number places, and shows K, M, B, or T (Thousand, Million, Billion, Trillion)
+    
+    [ABUtils print:[[ABUtils sharedInstance] decimalNumber: @12345] tag:@"decimalNumber"];
+    [ABUtils print:[ABUtils commaFormat: 12345] tag:@"commaFormat"];
+    [ABUtils print:[ABUtils commaFormatNumber:@1234567] tag:@"commaFormatNumber"];
 }
 
 - (void)didReceiveMemoryWarning
