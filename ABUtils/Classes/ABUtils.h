@@ -84,11 +84,11 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 /// Trims white space and removes extra new lines from string
 + (NSString *)trimWhiteSpace: (NSString *) text;
 
-/// Trims white space and removes extra new lines from string, with an option to trim multiple new lines or spaces
-+ (NSString *)trimWhiteSpace: (NSString *) text andMultiSpace: (BOOL) trimMultiple;
-
 /// Replaces instances of "\n\n" with "\n" and "  " with " "
 + (NSString *)trimMultiSpace: (NSString *) text;
+
+/// Trims white space and removes extra new lines from string, and replaces instances of "\n\n" with "\n" and "  " with " "
++ (NSString *)trimWhiteAndMultiSpace: (NSString *) text;
 
 /*!
  * @brief Removes spaces from a string

@@ -43,7 +43,7 @@
     
 #ifdef DEBUG
     if ([ABUtils notNull:tag]) {
-        CFShow((__bridge CFTypeRef)[NSString stringWithFormat:@"%@:\n%@", tag, dictionary]);
+        CFShow((__bridge CFTypeRef)[NSString stringWithFormat:@"%@: %@", tag, dictionary]);
     }
     else {
         CFShow((__bridge CFTypeRef)(dictionary));
@@ -118,13 +118,10 @@
     return text;
 }
 
-+ (NSString *)trimWhiteSpace: (NSString *) text andMultiSpace: (BOOL) trimMultiple {
++ (NSString *)trimWhiteAndMultiSpace: (NSString *) text {
     if ([ABUtils notNull:text]) {
-        text = [text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        if (trimMultiple) {
-            text = [ABUtils trimMultiSpace:text];
-        }
+        text = [ABUtils trimWhiteSpace:text];
+        text = [ABUtils trimMultiSpace:text];
     }
     
     return text;
@@ -145,8 +142,10 @@
 }
 
 + (NSString *)removeSpaces: (NSString *) text {
-    text = [self trimWhiteSpace:text andMultiSpace:YES];
-    return  [text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    text = [self trimWhiteAndMultiSpace:text];
+    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    text = [text stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    return text;
 }
 
 + (BOOL)isValidEmail: (NSString *)string

@@ -32,23 +32,49 @@
     // the 'notNull' function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNull', if you are looking to determine that a variable is null or nil.
     NSNull *null = [NSNull new];
     if ([ABUtils notNull:null]) {
-        [ABUtils print:@"False" tag:@"Result if null"];
+        [ABUtils print:@"False" tag:@"isNull"];
     }
     else if ([ABUtils isNull:null]) {
-        [ABUtils print:@"True" tag:@"Result if null"];
+        [ABUtils print:@"True" tag:@"isNull"];
     }
-    
-    [ABUtils printString:@"\n\n"];
     
     // Similar to the 'notNull' function, the 'notNil' is useful in determining whether an object is nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNil', if you are looking to determine that a variable is nil.
     NSString *testString = nil;
     
     if ([ABUtils notNil:testString]) {
-        [ABUtils print:@"False" tag:@"Result if nil"];
+        [ABUtils print:@"False" tag:@"isNil"];
     }
     else {
-        [ABUtils print:@"True" tag:@"Result if nil"];
+        [ABUtils print:@"True" tag:@"isNil"];
     }
+    
+    [ABUtils printString:@"\n\n"];
+    
+    // The 'notBlank' function is useful in determining whether a string is blank. This function can be used as a conditional in determining if a user has filled out a textfield.
+    testString = @"\n\nF$%OO B  4AR \n";
+    
+    [ABUtils print:testString tag:@"Original String"];
+    
+    if ([ABUtils notBlank: testString]) {
+        [ABUtils print:@"False" tag:@"notBlank"];
+    }
+    else {
+        [ABUtils print:@"True" tag:@"notBlank"];
+    }
+    
+    // There are several functions to modifying and cleaning strings:
+    // 1. removeSpecialCharacters: Removes characters from the string that are not an upper or lowercase letter
+    // 2. trimWhiteSpace: Trims white space from the ends of a string, such as ' ' and '\n'
+    // 3. trimMultiSpace: Trims multispace from a string, and turns '\n\n' into '\n' as well as '  ' into ' '
+    // 4. trimWhiteAndMultiSpace: An option which combines the previous two functions
+    // 5. removeSpaces: Removes all spaces and new lines from a string
+    
+    [ABUtils print:[ABUtils removeSpecialCharacters:testString] tag:@"removeSpecialCharacters"];
+    [ABUtils print:[ABUtils trimWhiteSpace:testString] tag:@"trimWhiteSpace"];
+    [ABUtils print:[ABUtils trimMultiSpace:testString] tag:@"trimMultiSpace"];
+    [ABUtils print:[ABUtils trimWhiteAndMultiSpace:testString] tag:@"trimWhiteAndMultiSpace"];
+    [ABUtils print:[ABUtils removeSpaces:testString] tag:@"removeSpaces"];
+    
 }
 
 - (void)didReceiveMemoryWarning
