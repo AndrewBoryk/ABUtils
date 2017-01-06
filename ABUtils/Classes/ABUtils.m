@@ -667,8 +667,6 @@
     return nil;
 }
 
-#pragma mark - Orientations
-
 + (CGAffineTransform) reorient: (OrientationType)orientation size: (CGSize)size {
     switch (orientation) {
         case TurnNormal:

@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #import <sys/sysctl.h>
 
+// Nice shortcuts for determining iOS version
 #define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
 #define IS_OS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
 #define IS_OS_6_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
@@ -18,7 +19,7 @@
 #define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define IS_OS_9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
 
-/// Type of rotation that should be applied to an AVAsset to return it to the proper orientation
+// Type of rotation that should be applied to an AVAsset to return it to the proper orientation
 typedef NS_ENUM(NSInteger, OrientationType) {
     TurnNormal,
     FlipHorizontal,
@@ -30,6 +31,7 @@ typedef NS_ENUM(NSInteger, OrientationType) {
     Rotate270,
 };
 
+// Model size for device
 typedef NS_ENUM(NSInteger, ModelSizeType) {
     Simulator,
     iPhone4Size,
@@ -186,11 +188,9 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 // Encodes image to Base 64 for Backend
 + (NSString *)encodeToBase64String:(UIImage *)image;
 
-// Encomes video to Base 64 for Backend
+// Encodes video to Base 64 for Backend
 + (NSString *)encodeVideoToBase64String:(NSURL *)videoURL;
 
-
-#pragma mark - Orientations
 // Provides the orientation transformation for reorienting videos
 + (CGAffineTransform) reorient: (OrientationType)orientation size: (CGSize)size;
 

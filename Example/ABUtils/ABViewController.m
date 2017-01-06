@@ -203,8 +203,6 @@
     
     //*** SEE APP FOR INTERACTIVE EXAMPLE ***//
     
-#pragma mark - Image/Video Oriented Function
-    
     // The function 'reorient' accepts an orientation change and a size, and returns the correct CGAffineTransform necessary to receive the result requested. This function proves very useful when working with AVAssetExporters and custom AVPlayers. Any person that has had to work with AVAssetExporter in order to crop videos will understand how useful this function can be in achieving the correct video orientation when the AVAsset is exported.
     
     [ABUtils reorient:Rotate90 size:CGSizeMake(720.0f, 720.0f)];
@@ -216,19 +214,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITextField Notification Methods
 - (void)hexFieldChanged {
     
     /// Changes the color of the preview based on the hex string inputted by the user
     self.colorPreview.backgroundColor = [ABUtils colorWithHexString: self.hexField.text];
 }
 
+#pragma mark - UITextField Delegate Methods
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
     return NO;
 }
 
-
+#pragma mark - Storyboard Methods
 - (IBAction)addPhotoAction:(id)sender {
     
     // Initializes and displays photo picker
@@ -282,6 +282,7 @@
     
 }
 
+#pragma mark - UIImagePickerController Delegate Methods
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     // Sets the photoView for the image that was selected
@@ -301,6 +302,7 @@
         // Adjust UI now that there is an image
         [self.addPhotoButton setTitle:@"" forState:UIControlStateNormal];
         
+        // Generates images
         bwImage = [ABUtils generateBlackAndWhiteImage:self.photoView.image];
         sepiaImage = [ABUtils generateSepiaImage:self.photoView.image];
         saturatedImage = [ABUtils generateSaturatedImage:self.photoView.image];
