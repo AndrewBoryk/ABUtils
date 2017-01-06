@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001A322A78A2601C9A178D6BDFCA4186 /* ABUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AE10596F815A57DEE42D76E72497C6C /* ABUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42B5F1257F6054B74AF039EFAA01AB03 /* ABUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E70FB19BECC1C0F39407344519CAEAC5 /* ABUtils-dummy.m */; };
-		45D0137F1E1FF1960052BD64 /* ABUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D0137D1E1FF1960052BD64 /* ABUtils.h */; };
-		45D013801E1FF1960052BD64 /* ABUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D0137E1E1FF1960052BD64 /* ABUtils.m */; };
+		0CDA1EE197D08D363D6DD98E545A20AA /* ABUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E8407ACC57540CAB3463B03CE26EBDB /* ABUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		188F0F65232E66917505F5571079D7B2 /* ABUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AE10596F815A57DEE42D76E72497C6C /* ABUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36F67BFE3E8D70C82F8D5A94873CD0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		4359DCB922CFE6F35DE3137785275727 /* ABUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E70FB19BECC1C0F39407344519CAEAC5 /* ABUtils-dummy.m */; };
 		7DEF0A2DF69DB4E9816309E984DE27A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		81C2DDCE63933FF0FF4CE8B2A0C93F13 /* Pods-ABUtils_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6247F5EC3E55E29FBBD2EE51C6AB7127 /* Pods-ABUtils_Example-dummy.m */; };
 		8E329995521D1BF80E5C7AC95D8ED6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		A2D35F4BB8A48566AB56AEB86B4A5BCA /* Pods-ABUtils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AE63BE27B1F89FEBB74EA4213917C1 /* Pods-ABUtils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3268DE481227E927A8EC973A65FBB68 /* Pods-ABUtils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6D46738DFD0C149848684CC70B92AF /* Pods-ABUtils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5EFB080DA30B7F7F288F93BBD781375 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A535330BD9C5EEBC8BE552AC62246966 /* ABUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 053E352EEA990005F0D5AD7DD619521B /* ABUtils.m */; };
 		F3CB1BE45DB7E2D4295AE504E533F77D /* Pods-ABUtils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64122DA5D94821E5EE8B7196F0E2B784 /* Pods-ABUtils_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -25,37 +25,37 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4A3D4D36A82897E1E5FBA33BD749047;
+			remoteGlobalIDString = BF2CA3532E09C1968D283C83B106405F;
 			remoteInfo = ABUtils;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053E352EEA990005F0D5AD7DD619521B /* ABUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ABUtils.m; sourceTree = "<group>"; };
 		06D934D7F088245B90664DD27BB3DA2C /* ABUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ABUtils-prefix.pch"; sourceTree = "<group>"; };
 		0E737F1F0D88EF47FC790F72BC2915C0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16FFB7BBDC41E7EF56D8E353F8763000 /* Pods_ABUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16FFB7BBDC41E7EF56D8E353F8763000 /* Pods_ABUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ABUtils_Example.framework; path = "Pods-ABUtils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6D46738DFD0C149848684CC70B92AF /* Pods-ABUtils_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ABUtils_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1F5C2CA3A9E90CBA196701D00470F05F /* Pods-ABUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
-		27015C423BCDDE2242C4ABC1C79D24BF /* Pods_ABUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27015C423BCDDE2242C4ABC1C79D24BF /* Pods_ABUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ABUtils_Tests.framework; path = "Pods-ABUtils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC7BFB70FC92DD45238CFEBDF8ECFDE /* Pods-ABUtils_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABUtils_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3B0A2E216392F81942CE3A6967B2CC15 /* Pods-ABUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		45D0137D1E1FF1960052BD64 /* ABUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUtils.h; sourceTree = "<group>"; };
-		45D0137E1E1FF1960052BD64 /* ABUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUtils.m; sourceTree = "<group>"; };
-		6015F79205E96F533A5C1207DBBCF4E0 /* Pods-ABUtils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ABUtils_Example.modulemap"; sourceTree = "<group>"; };
+		6015F79205E96F533A5C1207DBBCF4E0 /* Pods-ABUtils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ABUtils_Example.modulemap"; sourceTree = "<group>"; };
 		6247F5EC3E55E29FBBD2EE51C6AB7127 /* Pods-ABUtils_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ABUtils_Example-dummy.m"; sourceTree = "<group>"; };
 		64122DA5D94821E5EE8B7196F0E2B784 /* Pods-ABUtils_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ABUtils_Tests-dummy.m"; sourceTree = "<group>"; };
 		6A713CAE74E8AB76C7FB556C442B84A9 /* Pods-ABUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		77AE63BE27B1F89FEBB74EA4213917C1 /* Pods-ABUtils_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ABUtils_Example-umbrella.h"; sourceTree = "<group>"; };
 		7AE10596F815A57DEE42D76E72497C6C /* ABUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ABUtils-umbrella.h"; sourceTree = "<group>"; };
 		7C6970CA5C10D0F9ADE4B1EAF18551AA /* Pods-ABUtils_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ABUtils_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7F0C2027E1B96F127D3C0D3FD02FC97E /* ABUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		980DFF1B1F70A0D76C2A85004C0EAB44 /* Pods-ABUtils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ABUtils_Tests.modulemap"; sourceTree = "<group>"; };
+		7F0C2027E1B96F127D3C0D3FD02FC97E /* ABUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ABUtils.framework; path = ABUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		980DFF1B1F70A0D76C2A85004C0EAB44 /* Pods-ABUtils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ABUtils_Tests.modulemap"; sourceTree = "<group>"; };
 		9B4CCD442EE14A4BB0D1BB50CC6E9D53 /* Pods-ABUtils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ABUtils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9E69FF2C057454ECC877B4B06394F355 /* Pods-ABUtils_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABUtils_Example-resources.sh"; sourceTree = "<group>"; };
+		9E8407ACC57540CAB3463B03CE26EBDB /* ABUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ABUtils.h; sourceTree = "<group>"; };
 		AE615366507058D79782A7ED3A857CAE /* Pods-ABUtils_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABUtils_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B1C472A9CDD9974DEA1D6F3B4FD3A650 /* ABUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ABUtils.xcconfig; sourceTree = "<group>"; };
-		B63F84DF4490DB75801C6B7CB275811A /* ABUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ABUtils.modulemap; sourceTree = "<group>"; };
+		B63F84DF4490DB75801C6B7CB275811A /* ABUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ABUtils.modulemap; sourceTree = "<group>"; };
 		BD5085F57316BE7AF4380033EB3AC1E9 /* Pods-ABUtils_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ABUtils_Tests-resources.sh"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E0DAFB47A5BD23BC7083594EB196A535 /* Pods-ABUtils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ABUtils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -67,14 +67,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02F7A8F2572A28CF8C0C1B326DB27C11 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5EFB080DA30B7F7F288F93BBD781375 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A6CA20A8251283C42597B759C311DFE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,9 +83,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3329320A6E045AEA4BE5D35452DD528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36F67BFE3E8D70C82F8D5A94873CD0A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0063369F34D649E51649C37E74452ABC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E8407ACC57540CAB3463B03CE26EBDB /* ABUtils.h */,
+				053E352EEA990005F0D5AD7DD619521B /* ABUtils.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1A75ECAE7BB4418732675BAF323218F4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,23 +125,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/ABUtils";
-			sourceTree = "<group>";
-		};
-		4990D7314A419D9A2535DA739A793178 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				45D0137D1E1FF1960052BD64 /* ABUtils.h */,
-				45D0137E1E1FF1960052BD64 /* ABUtils.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5588380440A536F060C27C34C2C1FDE2 /* ABUtils */ = {
-			isa = PBXGroup;
-			children = (
-				4990D7314A419D9A2535DA739A793178 /* Classes */,
-			);
-			path = ABUtils;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -200,7 +193,7 @@
 		DF9EC5F9DFB7B2B0D57FFE8323BEA286 /* ABUtils */ = {
 			isa = PBXGroup;
 			children = (
-				5588380440A536F060C27C34C2C1FDE2 /* ABUtils */,
+				F12BB9816C99E3CB0F4C4DDB08AC22AA /* ABUtils */,
 				22F38BFDE8E249312A97B3750D5E03EB /* Support Files */,
 			);
 			name = ABUtils;
@@ -225,6 +218,15 @@
 			path = "Target Support Files/Pods-ABUtils_Tests";
 			sourceTree = "<group>";
 		};
+		F12BB9816C99E3CB0F4C4DDB08AC22AA /* ABUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0063369F34D649E51649C37E74452ABC /* Classes */,
+			);
+			name = ABUtils;
+			path = ABUtils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -244,12 +246,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E08BF88CB583C1A068355F81E364838D /* Headers */ = {
+		B2C40557F1B2E13884DD1571D4453AC7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001A322A78A2601C9A178D6BDFCA4186 /* ABUtils-umbrella.h in Headers */,
-				45D0137F1E1FF1960052BD64 /* ABUtils.h in Headers */,
+				188F0F65232E66917505F5571079D7B2 /* ABUtils-umbrella.h in Headers */,
+				0CDA1EE197D08D363D6DD98E545A20AA /* ABUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,13 +275,13 @@
 			productReference = 27015C423BCDDE2242C4ABC1C79D24BF /* Pods_ABUtils_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D4A3D4D36A82897E1E5FBA33BD749047 /* ABUtils */ = {
+		BF2CA3532E09C1968D283C83B106405F /* ABUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1535E89969B905D108DDFEBC8D59EF2D /* Build configuration list for PBXNativeTarget "ABUtils" */;
+			buildConfigurationList = 902DBF111B0B190C6762C92661C4746B /* Build configuration list for PBXNativeTarget "ABUtils" */;
 			buildPhases = (
-				A52712BBC0B9BE9BE3BAD784901C5BBE /* Sources */,
-				02F7A8F2572A28CF8C0C1B326DB27C11 /* Frameworks */,
-				E08BF88CB583C1A068355F81E364838D /* Headers */,
+				A47F2E16A75D8C6543EB2AB517855AB0 /* Sources */,
+				D3329320A6E045AEA4BE5D35452DD528 /* Frameworks */,
+				B2C40557F1B2E13884DD1571D4453AC7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -329,7 +331,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4A3D4D36A82897E1E5FBA33BD749047 /* ABUtils */,
+				BF2CA3532E09C1968D283C83B106405F /* ABUtils */,
 				EB266A14938B445A66FA2CBEE911D514 /* Pods-ABUtils_Example */,
 				5D1DCFF890D0FF99834B5C1A30DAD8F0 /* Pods-ABUtils_Tests */,
 			);
@@ -345,12 +347,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A52712BBC0B9BE9BE3BAD784901C5BBE /* Sources */ = {
+		A47F2E16A75D8C6543EB2AB517855AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D013801E1FF1960052BD64 /* ABUtils.m in Sources */,
-				42B5F1257F6054B74AF039EFAA01AB03 /* ABUtils-dummy.m in Sources */,
+				4359DCB922CFE6F35DE3137785275727 /* ABUtils-dummy.m in Sources */,
+				A535330BD9C5EEBC8BE552AC62246966 /* ABUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,43 +370,12 @@
 		49843D6A062C9B5D201DE34BCED12267 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ABUtils;
-			target = D4A3D4D36A82897E1E5FBA33BD749047 /* ABUtils */;
+			target = BF2CA3532E09C1968D283C83B106405F /* ABUtils */;
 			targetProxy = E934EB1FF1BB185FF981B7CA627A4924 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FC24915915952FD3721FAEFFC0CF406 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C472A9CDD9974DEA1D6F3B4FD3A650 /* ABUtils.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ABUtils/ABUtils-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ABUtils/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ABUtils/ABUtils.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ABUtils;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1C4C28482DCBAD805110A5F6CF5B0625 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F5C2CA3A9E90CBA196701D00470F05F /* Pods-ABUtils_Example.release.xcconfig */;
@@ -432,6 +403,37 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ABUtils_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7FC3A27C3E9D65901D02BFC1B070DA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C472A9CDD9974DEA1D6F3B4FD3A650 /* ABUtils.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ABUtils/ABUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ABUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ABUtils/ABUtils.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ABUtils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -559,7 +561,7 @@
 			};
 			name = Debug;
 		};
-		C27E4431F5031BDAAF0DFB8457C2704B /* Release */ = {
+		AB01152ECC092EB2B1FDB0D4620DF75F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1C472A9CDD9974DEA1D6F3B4FD3A650 /* ABUtils.xcconfig */;
 			buildSettings = {
@@ -567,7 +569,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -580,7 +582,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ABUtils/ABUtils.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ABUtils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -588,7 +590,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		D8112BF9308AACEDEA202A298AE5F544 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -663,15 +665,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1535E89969B905D108DDFEBC8D59EF2D /* Build configuration list for PBXNativeTarget "ABUtils" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FC24915915952FD3721FAEFFC0CF406 /* Debug */,
-				C27E4431F5031BDAAF0DFB8457C2704B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -695,6 +688,15 @@
 			buildConfigurations = (
 				D8112BF9308AACEDEA202A298AE5F544 /* Debug */,
 				DC60B720BBB44BC86B5CB12720FD6534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		902DBF111B0B190C6762C92661C4746B /* Build configuration list for PBXNativeTarget "ABUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB01152ECC092EB2B1FDB0D4620DF75F /* Debug */,
+				7FC3A27C3E9D65901D02BFC1B070DA4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

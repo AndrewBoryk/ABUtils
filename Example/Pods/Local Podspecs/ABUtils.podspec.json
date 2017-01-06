@@ -1,9 +1,9 @@
 {
   "name": "ABUtils",
   "version": "0.1.0",
-  "summary": "A short description of ABUtils.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/ABUtils",
+  "summary": "Utils that can be used in any project, to reduce the amount of repetitive code by providing users with useful pre-written functions.",
+  "description": "Utils that can be used in any project, to reduce the amount of repetitive code by providing users with useful pre-written functions. As demand increases for a function, it will be added.",
+  "homepage": "https://github.com/andrewboryk/ABUtils",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Andrew Boryk": "aboryk@mercymavericks.edu"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/ABUtils.git",
+    "git": "https://github.com/andrewboryk/ABUtils.git",
     "tag": "0.1.0"
   },
   "platforms": {

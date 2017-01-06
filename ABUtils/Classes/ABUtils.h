@@ -58,14 +58,11 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 #pragma mark - Conditional Oriented
 
-/*!
- * @brief Determines if an object is not null or nil
- * @param object the item looking to be analyzed
- * @return true if the object is not null or nil, false otherwise
- */
+/// Returns true if the object is not null or nil, otherwise returns false
 + (BOOL)notNull:(id)object;
 
-/// Returns true if the object is null or nil
+/// Returns true if the object is null or nil, otherwise returns false
+
 + (BOOL)isNull:(id)object;
 
 /// Returns true if the object is not nil, returns true if the object is null
@@ -76,8 +73,8 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 /*!
  * @brief Determines if a string is not blank
- * @param text the string looking to be analyzed
- * @return true if the object is not just spaces or blank, false if otherwise
+ * @param text The string looking to be analyzed
+ * @return Returns true if the object is not just spaces or blank, otherwise returns false
  */
 + (BOOL)notBlank: (NSString *) text;
 
