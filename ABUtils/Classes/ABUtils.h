@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 /// Shared Instance of Utils
 + (id)sharedInstance;
 
-/// Formatting dates from the server
+/// Formatting dates from the server, in full format
 @property (strong, nonatomic) NSDateFormatter *serverDateFormatter;
 
 /// Formats numbers to include commas
@@ -71,11 +71,7 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 /// Returns true if the object is nil, returns false if the object is null
 + (BOOL)isNil:(id)object;
 
-/*!
- * @brief Determines if a string is not blank
- * @param text The string looking to be analyzed
- * @return Returns true if the object is not just spaces or blank, otherwise returns false
- */
+/// Returns true if the object is not just spaces or blank, otherwise returns false
 + (BOOL)notBlank: (NSString *) text;
 
 /*!
