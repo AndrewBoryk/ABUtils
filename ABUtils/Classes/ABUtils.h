@@ -160,7 +160,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 /// Returns a UIColor for a hex value
 + (UIColor *)colorWithHexString:(NSString*)hex;
 
-/// Returns the platform type of the user's phone
+/// Returns the platform type of the user's phone (ie. iPhone 5S)
 + (NSString *)platformType;
 
 /// Returns the screen size of the device (iPhone only)

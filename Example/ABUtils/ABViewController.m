@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     
-    //////// DEV ORIENTED FUNCTIONS ////////
+#pragma mark - Dev Oriented Function Examples
     
     // Print can be used in replacement for NSLog. Print to console is done through CFShow. Also, print to console will not be done on production, only will print when app is in Debug mode.
     // Print has two methods
@@ -30,7 +30,7 @@
     
     [ABUtils printString:@"\n\n"];
     
-    //////// CONDITIONAL ORIENTED FUNCTIONS ////////
+#pragma mark - Conditional Oriented Function Examples
     
     // the 'notNull' function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNull', if you are looking to determine that a variable is null or nil.
     NSNull *null = [NSNull new];
@@ -113,7 +113,7 @@
     
     [ABUtils printString:@"\n\n"];
     
-    //////// TIME ORIENTED FUNCTIONS ////////
+#pragma mark - Time Oriented Function Examples
     
     // The 'timeZone' quickly returns the time zone of the user
     
@@ -145,7 +145,7 @@
     
     [ABUtils printString:@"\n\n"];
     
-    //////// NUMBER ORIENTED FUNCTIONS ////////
+#pragma mark - Number Oriented Function Examples
     
     // The following functions return a string formatted from a number
     // 1. decimalNumber: Formats the number as a string with commas, accepting an NSNumber. This function should be called using a sharedInstance. Date and number formatters take up processing time, so this makes sure that the formatter used for this function is only initilized once
@@ -155,6 +155,24 @@
     [ABUtils print:[[ABUtils sharedInstance] decimalNumber: @12345] tag:@"decimalNumber"];
     [ABUtils print:[ABUtils commaFormat: 12345] tag:@"commaFormat"];
     [ABUtils print:[ABUtils commaFormatNumber:@1234567] tag:@"commaFormatNumber"];
+    
+    [ABUtils printString:@"\n\n"];
+    
+#pragma mark - UI Oriented Function Examples
+    
+    // 'colorWithHexString' function is a very useful function. Currently, there is no easy way to use Hex strings to declare UIColors. This function accepts a 6-letter hex string (don't use the shortcut hex strings) and returns the UIColor for that string.
+    
+    //*** SEE APP FOR EXAMPLE ***//
+    
+    // These functions provide a 1 line means to determine the model of a device
+    // 1. platformType: Returns the device and model of the user's device (ie. iPhone 5S)
+    // 2. modelTypeString: There are currently 4 different resolution sizes. When developing apps and adjusting UI depending on the size of the devices screen, this function lets you know what the screen resolution is based off of specific models. The 5 types that can be returned: iPhone 3.5 inch, iPhone 4 inch, iPhone 6 size, iPhone Plus size, and Simulator. I chose names that I could understand consistently for reference.
+    // 3. modelTypeSize: This function is the same as the previous, however it returns a type using my custom enum. The different values are - iPhone4Size, iPhone5Size, iPhone6Size, iPhone6PlusSize, and Simulator.
+    
+    [ABUtils print:[ABUtils platformType] tag:@"platformType"];
+    [ABUtils print:[ABUtils modelTypeString] tag:@"modelTypeString"];
+    NSLog(@"modelTypeSize: %ld", [ABUtils modelTypeSize]);
+    
 }
 
 - (void)didReceiveMemoryWarning
