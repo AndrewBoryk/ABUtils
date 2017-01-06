@@ -92,8 +92,8 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 /*!
  * @brief Removes spaces from a string
- * @param text the string that spaces will be removed from
- * @return a string without spaces
+ * @param text The string that spaces will be removed from
+ * @return A string without spaces
  */
 + (NSString *)removeSpaces: (NSString *) text;
 
@@ -129,6 +129,8 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 // Returns the NSDate for the end of tomorrow
 + (NSDate *)endOfTomorrow;
+
+#pragma mark - Number Oriented
 
 /// Return decimal string for the number, with commas
 - (NSString *) decimalNumber: (NSNumber *)value;

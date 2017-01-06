@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     
+    //////// DEV ORIENTED FUNCTIONS ////////
     
     // Print can be used in replacement for NSLog. Print to console is done through CFShow. Also, print to console will not be done on production, only will print when app is in Debug mode.
     // Print has two methods
@@ -28,6 +29,8 @@
     [ABUtils print:@"\"Hello World!\"" tag:@"Narrator"];
     
     [ABUtils printString:@"\n\n"];
+    
+    //////// CONDITIONAL ORIENTED FUNCTIONS ////////
     
     // the 'notNull' function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNull', if you are looking to determine that a variable is null or nil.
     NSNull *null = [NSNull new];
@@ -74,6 +77,41 @@
     [ABUtils print:[ABUtils trimMultiSpace:testString] tag:@"trimMultiSpace"];
     [ABUtils print:[ABUtils trimWhiteAndMultiSpace:testString] tag:@"trimWhiteAndMultiSpace"];
     [ABUtils print:[ABUtils removeSpaces:testString] tag:@"removeSpaces"];
+    
+    [ABUtils printString:@"\n\n"];
+    
+    // To determine if an email is a valid format, you can use the 'isValidEmail' function.
+    
+    testString = @"john.smith@gmailcom";
+    
+    if ([ABUtils isValidEmail: testString]) {
+        [ABUtils print:@"Valid" tag:testString];
+    }
+    else {
+        [ABUtils print:@"Invalid" tag:testString];
+    }
+    
+    testString = @"john.smith@gmail.com";
+    
+    if ([ABUtils isValidEmail: testString]) {
+        [ABUtils print:@"Valid" tag:testString];
+    }
+    else {
+        [ABUtils print:@"Invalid" tag:testString];
+    }
+    
+    // The last of the conditional functions is 'boolValue'. This function is used to parse the bool value out of an NSString or NSNumber.
+    
+    testString = @"1";
+    
+    if ([ABUtils boolValue: testString]) {
+        [ABUtils print:@"True" tag:testString];
+    }
+    else {
+        [ABUtils print:@"False" tag:testString];
+    }
+    
+    //////// TIME ORIENTED FUNCTIONS ////////
     
 }
 

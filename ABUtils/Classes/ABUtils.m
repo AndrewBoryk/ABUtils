@@ -118,15 +118,6 @@
     return text;
 }
 
-+ (NSString *)trimWhiteAndMultiSpace: (NSString *) text {
-    if ([ABUtils notNull:text]) {
-        text = [ABUtils trimWhiteSpace:text];
-        text = [ABUtils trimMultiSpace:text];
-    }
-    
-    return text;
-}
-
 + (NSString *)trimMultiSpace: (NSString *) text {
     if ([ABUtils notNull:text]) {
         while ([text containsString:@"  "]) {
@@ -141,6 +132,15 @@
     return text;
 }
 
++ (NSString *)trimWhiteAndMultiSpace: (NSString *) text {
+    if ([ABUtils notNull:text]) {
+        text = [ABUtils trimWhiteSpace:text];
+        text = [ABUtils trimMultiSpace:text];
+    }
+    
+    return text;
+}
+
 + (NSString *)removeSpaces: (NSString *) text {
     text = [self trimWhiteAndMultiSpace:text];
     text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -150,7 +150,7 @@
 
 + (BOOL)isValidEmail: (NSString *)string
 {
-    BOOL stricterFilter = NO; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
+    BOOL stricterFilter = NO; 
     NSString *stricterFilterString = @"^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$";
     NSString *laxString = @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$";
     NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
