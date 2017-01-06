@@ -174,12 +174,6 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 // Send image, and returns same image scaled to 1080px and rotated accordingly
 + (UIImage *)scaleAndRotateImage:(UIImage *)image;
 
-// Encodes image to Base 64 for Backend
-+ (NSString *)encodeToBase64String:(UIImage *)image;
-
-// Encomes video to Base 64 for Backend
-+ (NSString *)encodeVideoToBase64String:(NSURL *)videoURL;
-
 /// Generated a black and white image from the image received
 + (UIImage *) generateBlackAndWhiteImage: (UIImage *) image;
 
@@ -188,6 +182,12 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 /// Generates a saturated image from the image received
 + (UIImage *) generateSaturatedImage: (UIImage *) image;
+
+// Encodes image to Base 64 for Backend
++ (NSString *)encodeToBase64String:(UIImage *)image;
+
+// Encomes video to Base 64 for Backend
++ (NSString *)encodeVideoToBase64String:(NSURL *)videoURL;
 
 
 #pragma mark - Orientations

@@ -8,7 +8,20 @@
 
 #import "ABViewController.h"
 
-@interface ABViewController ()
+@interface ABViewController () {
+    
+    /// The image that was selected by the user
+    UIImage *selectedImage;
+    
+    /// The black and white version of the selected image
+    UIImage *bwImage;
+    
+    /// The sepia version of the selected image
+    UIImage *sepiaImage;
+    
+    /// The saturated version of the selected image
+    UIImage *saturatedImage;
+}
 
 @end
 
@@ -167,7 +180,7 @@
     self.colorPreview.layer.borderWidth = 1.0f;
     self.colorPreview.layer.borderColor = [ABUtils colorWithHexString:@"000000"].CGColor; // Black border
     
-    //*** SEE APP FOR EXAMPLE ***//
+    //*** SEE APP FOR INTERACTIVE EXAMPLE ***//
     
     // These functions provide a 1 line means to determine the model of a device
     // 1. platformType: Returns the device and model of the user's device (ie. iPhone 5S)
@@ -177,7 +190,24 @@
     [ABUtils print:[ABUtils platformType] tag:@"platformType"];
     [ABUtils print:[ABUtils modelTypeString] tag:@"modelTypeString"];
     NSLog(@"modelTypeSize: %ld", [ABUtils modelTypeSize]);
+
+#pragma mark - Image/Video Oriented Function Examples
     
+    // The following functions provide tools in editing and encoding media
+    // 1. scaleAndRotateImage: Scales the image to 1080px and rotates it to the orientation it was taken in
+    // 2. generateBlackAndWhiteImage: Generates a black and white version of the provided image
+    // 3. generateSepiaImage: Generates a sepia version of the provided image
+    // 4. generateSaturatedImage: Generates a saturated version of the provided image
+    // 5. encodeToBase64String: Encodes the image provided into a Base64 string
+    // 6. encodeVideoToBase64String: Encodes the video provided into a Base64 string
+    
+    //*** SEE APP FOR INTERACTIVE EXAMPLE ***//
+    
+#pragma mark - Image/Video Oriented Function
+    
+    // The function 'reorient' accepts an orientation change and a size, and returns the correct CGAffineTransform necessary to receive the result requested. This function proves very useful when working with AVAssetExporters and custom AVPlayers. Any person that has had to work with AVAssetExporter in order to crop videos will understand how useful this function can be in achieving the correct video orientation when the AVAsset is exported.
+    
+    [ABUtils reorient:Rotate90 size:CGSizeMake(720.0f, 720.0f)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -197,4 +227,97 @@
     [textField resignFirstResponder];
     return NO;
 }
+
+
+- (IBAction)addPhotoAction:(id)sender {
+    
+    // Initializes and displays photo picker
+    UIImagePickerController *imagePicker =
+    [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.view.backgroundColor = [UIColor whiteColor];
+    imagePicker.allowsEditing = NO;
+    
+    [self presentViewController:imagePicker
+                       animated:YES
+                     completion:nil];
+}
+
+- (IBAction)blackAndWhiteAction:(id)sender {
+    
+    // The function 'generateBlackAndWhiteImage' does exactly what it states, it generates a black and white version of the selected image
+    
+    if ([ABUtils notNull: bwImage]) {
+        self.photoView.image = bwImage;
+    }
+    else {
+        bwImage = [ABUtils generateBlackAndWhiteImage:selectedImage];
+        self.photoView.image = bwImage;
+    }
+    
+}
+
+- (IBAction)sepiaAction:(id)sender {
+    // The function 'generateSepiaImage' does exactly what it states, it generates a sepia version of the selected image
+    if ([ABUtils notNull: sepiaImage]) {
+        self.photoView.image = sepiaImage;
+    }
+    else {
+        sepiaImage = [ABUtils generateSepiaImage:selectedImage];
+        self.photoView.image = sepiaImage;
+    }
+}
+
+- (IBAction)saturatedAction:(id)sender {
+    // The function 'generateBlackAndWhiteImage' does exactly what it states, it generates a saturated version of the selected image
+    
+    if ([ABUtils notNull: saturatedImage]) {
+        self.photoView.image = saturatedImage;
+    }
+    else {
+        saturatedImage = [ABUtils generateSaturatedImage:selectedImage];
+        self.photoView.image = saturatedImage;
+    }
+    
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Sets the photoView for the image that was selected
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    selectedImage = image;
+    
+    // Scales and rotates image to 1080px
+    selectedImage = [ABUtils scaleAndRotateImage:selectedImage];
+    
+    // Encodes image into Base64 string
+//    NSString *encodedString = [ABUtils encodeToBase64String:selectedImage];
+    
+    self.photoView.image = selectedImage;
+    
+    if ([ABUtils notNull: self.photoView.image]) {
+        // Adjust UI now that there is an image
+        [self.addPhotoButton setTitle:@"" forState:UIControlStateNormal];
+        
+        bwImage = [ABUtils generateBlackAndWhiteImage:self.photoView.image];
+        sepiaImage = [ABUtils generateSepiaImage:self.photoView.image];
+        saturatedImage = [ABUtils generateSaturatedImage:self.photoView.image];
+        
+        self.blackAndWhiteButton.hidden = NO;
+        self.sepiaButton.hidden = NO;
+        self.saturatedButton.hidden = NO;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
+
+
+
+
+
+
+
+
