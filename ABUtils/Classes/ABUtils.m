@@ -38,19 +38,6 @@
     return self;
 }
 
-//void TNSLog(NSString *format, ...){
-//
-//    #ifdef DEBUG
-//        if ([Utils notNull:format]) {
-//            va_list args;
-//            va_start(args, format);
-//            CFShow((__bridge CFTypeRef)[NSString stringWithFormat:format, args]);
-//            va_end(args);
-//        }
-//    #endif
-//
-//}
-
 + (void) print: (id) dictionary tag: (NSString *) tag {
     
     

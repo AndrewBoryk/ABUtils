@@ -25,7 +25,8 @@ Utils that can be used in any project, to reduce the amount of repetitive code b
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Andrew Boryk' => 'aboryk@mercymavericks.edu' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/ABUtils.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/andrewboryk/ABUtils.git', :tag => s.version.to_s }
+
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

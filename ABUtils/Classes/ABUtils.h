@@ -50,8 +50,6 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 #pragma mark - Dev Oriented
 
-//void TNSLog(NSString *format, ...);
-
 /// Print dictionary with a tag, using CFShow
 + (void) print: (id) dictionary tag: (NSString *) tag;
 
@@ -124,7 +122,13 @@ typedef NS_ENUM(NSInteger, OrientationType) {
  */
 + (NSString *)timeZone;
 
-/// Determines if the distance between now and the date received is more or equal to the number of days received
+/**
+ Determines if the time difference between now and the date received is more or equal to the number of days received
+
+ @param time The time being compared to now
+ @param days Number of days difference looking to be compare to date provided
+ @return Returns true if the difference between now and the time provided is more than or equal to the number of days provided, otherwise returns false
+ */
 + (BOOL)differenceMet: (NSDate *) time days: (int) days;
 
 // Returns the NSDate for the end of date received

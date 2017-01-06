@@ -6,7 +6,8 @@
 //  Copyright (c) 2017 Andrew Boryk. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface ABViewController : UIViewController
 
