@@ -18,7 +18,7 @@
 #define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define IS_OS_9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
 
-/// Determines what type of rotation should be applied to an AVAsset to return it to the proper orientation
+/// Type of rotation that should be applied to an AVAsset to return it to the proper orientation
 typedef NS_ENUM(NSInteger, OrientationType) {
     TurnNormal,
     FlipHorizontal,
@@ -28,6 +28,14 @@ typedef NS_ENUM(NSInteger, OrientationType) {
     Rotate90,
     Rotate90FlipVertical,
     Rotate270,
+};
+
+typedef NS_ENUM(NSInteger, ModelSizeType) {
+    Simulator,
+    iPhone4Size,
+    iPhone5Size,
+    iPhone6Size,
+    iPhone6PlusSize,
 };
 
 @interface ABUtils : NSObject {
@@ -110,10 +118,22 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 #pragma mark - Time Oriented
 
 /*!
- * @brief Determines the timezone of the user
+ * @brief Determines the timezone of the user, and returns a string value of that time zone
  * @return timezone of the user in string format
  */
 + (NSString *)timeZone;
+
+/// Returns the ordinal suffix for a number (ie. th, st, nd)
++ (NSString *)ordinalSuffixFromInt:(NSInteger)number;
+
+/// Returns the number in string format with its proper ordinal suffix (ie. 5th, 1st, 2nd)
++ (NSString *)ordinalNumber:(NSInteger)number;
+
+// Returns the NSDate for the end of date received
++ (NSDate *)endOfDay:(NSDate *)date;
+
+// Returns the NSDate for the end of tomorrow
++ (NSDate *)endOfTomorrow;
 
 /**
  Determines if the time difference between now and the date received is more or equal to the number of days received
@@ -123,12 +143,6 @@ typedef NS_ENUM(NSInteger, OrientationType) {
  @return Returns true if the difference between now and the time provided is more than or equal to the number of days provided, otherwise returns false
  */
 + (BOOL)differenceMet: (NSDate *) time days: (int) days;
-
-// Returns the NSDate for the end of date received
-+ (NSDate *)endOfDay:(NSDate *)date;
-
-// Returns the NSDate for the end of tomorrow
-+ (NSDate *)endOfTomorrow;
 
 #pragma mark - Number Oriented
 
@@ -143,14 +157,17 @@ typedef NS_ENUM(NSInteger, OrientationType) {
 
 #pragma mark - UI Oriented
 
-// Returns a UIColor for a hex value
+/// Returns a UIColor for a hex value
 + (UIColor *)colorWithHexString:(NSString*)hex;
 
-// Returns the platform type of the user's phone
+/// Returns the platform type of the user's phone
 + (NSString *)platformType;
 
-/// Determines model type for screen
-+ (NSString *) modelTypeScreen: (NSString *) platform;
+/// Returns the screen size of the device (iPhone only)
++ (NSString *)modelTypeString;
+
+/// Determines model type for screen size
++ (ModelSizeType)modelTypeSize;
 
 #pragma mark - Image/Video Oriented
 

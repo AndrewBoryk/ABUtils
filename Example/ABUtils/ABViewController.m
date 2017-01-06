@@ -111,7 +111,37 @@
         [ABUtils print:@"False" tag:testString];
     }
     
+    [ABUtils printString:@"\n\n"];
+    
     //////// TIME ORIENTED FUNCTIONS ////////
+    
+    // The 'timeZone' quickly returns the time zone of the user
+    
+    [ABUtils print:[ABUtils timeZone] tag:@"Time Zone"];
+    
+    // The 'ordinalSuffixFromInt' function returns the proper ordinal suffix for an int (ie. st, rd, nd)
+    // The 'orinalNumber' function simplifies the previous function, by supplying the ordinal suffix, and appending it to the number, returning a full string
+    [ABUtils printString:[NSString stringWithFormat:@"1%@ Place", [ABUtils ordinalSuffixFromInt: 1]]];
+    [ABUtils printString:[NSString stringWithFormat:@"%@ Place", [ABUtils ordinalNumber: 2]]];
+    
+    [ABUtils printString:@"\n\n"];
+    
+    // The 'endOfDay' function returns an NSDate which represents 11:59 PM on the provided date
+    // The 'endOfTomorrow' function is similar to the previous function, but provides the end of the date for tomorrow
+    
+    [ABUtils print:[ABUtils endOfDay:[NSDate date]] tag:@"End of Today"];
+    [ABUtils print:[ABUtils endOfTomorrow] tag:@"End of Tomorrow"];
+    
+    // The 'differenceMet' function is used to determine if a number of specified days have passed between now and the date provided.
+    
+    NSDate *tomorrowDate = [ABUtils endOfTomorrow];
+    
+    if ([ABUtils differenceMet:tomorrowDate days:5]) {
+        [ABUtils printString:@"There is a 5 day difference."];
+    }
+    else {
+        [ABUtils printString:@"There isn't a 5 day difference."];
+    }
     
 }
 

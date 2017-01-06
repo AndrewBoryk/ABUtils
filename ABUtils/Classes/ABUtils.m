@@ -187,6 +187,37 @@
     return suffix;
 }
 
++ (NSString *)ordinalNumber:(NSInteger)number {
+    NSString *suffix = [ABUtils ordinalSuffixFromInt:number];
+    
+    return [NSString stringWithFormat:@"%i%@", number, suffix];
+}
+
++ (NSDate *)endOfDay:(NSDate *)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    cal.timeZone = [NSTimeZone localTimeZone];
+    
+    NSDateComponents *components = [cal components:(  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond ) fromDate:date];
+    
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    
+    return [cal dateFromComponents:components];
+    
+}
+
+
++ (NSDate *)endOfTomorrow
+{
+    NSDate *now = [NSDate date];
+    int daysToAdd = 1;
+    NSDate *tomorrowDate = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
+    
+    return [ABUtils endOfDay:tomorrowDate];
+}
+
 + (BOOL)differenceMet: (NSDate *) time days: (int) days {
     
     if (![ABUtils notNull:time] || days <= 0) {
@@ -215,35 +246,7 @@
     
 }
 
-+ (NSDate *)endOfDay:(NSDate *)date
-{
-    NSCalendar *cal = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [cal components:(  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond ) fromDate:date];
-    
-    [components setHour:23];
-    [components setMinute:59];
-    [components setSecond:59];
-    
-    return [cal dateFromComponents:components];
-    
-}
-
-
-+ (NSDate *)endOfTomorrow
-{
-    NSDate *now = [NSDate date];
-    int daysToAdd = 1;
-    NSDate *newDate1 = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:(  NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond ) fromDate:newDate1];
-    
-    [components setHour:23];
-    [components setMinute:59];
-    [components setSecond:59];
-    
-    return [cal dateFromComponents:components];
-    
-}
+#pragma mark - Number Oriented
 
 - (NSString *) decimalNumber: (NSNumber *)value {
     NSString *formattedOutput = [decimalFormatter stringFromNumber:value];
@@ -396,8 +399,11 @@
     
 }
 
-+ (NSString *) modelTypeScreen: (NSString *) platform {
++ (NSString *) modelTypeString {
     
+    NSString *platform = [ABUtils platformType];
+    
+    /// This function is only useful for iPhone Only apps, the iPad screen sizes will register as iPhone 4 size because they are 3:4 resolution.
     if ([platform isEqualToString:@"iPhone 1G"] || [platform isEqualToString:@"iPhone 3G"] || [platform isEqualToString:@"iPhone 3GS"] || [platform isEqualToString:@"iPhone 4"] || [platform isEqualToString:@"iPhone 4S"] || [platform isEqualToString:@"iPod Touch 1G"] || [platform isEqualToString:@"iPod Touch 2G"] || [platform isEqualToString:@"iPod Touch 3G"] || [platform isEqualToString:@"iPod Touch 4G"] || [platform containsString:@"iPad"] || [platform isEqualToString:@"iPad Simulator"]) {
         return @"iPhone 3.5 inch";
     }
@@ -412,6 +418,28 @@
     }
     else {
         return @"Simulator";
+    }
+}
+
++ (ModelSizeType) modelTypeSize {
+    
+    NSString *platform = [ABUtils platformType];
+    
+    /// This function is only useful for iPhone Only apps, the iPad screen sizes will register as iPhone 4 size because they are 3:4 resolution.
+    if ([platform isEqualToString:@"iPhone 1G"] || [platform isEqualToString:@"iPhone 3G"] || [platform isEqualToString:@"iPhone 3GS"] || [platform isEqualToString:@"iPhone 4"] || [platform isEqualToString:@"iPhone 4S"] || [platform isEqualToString:@"iPod Touch 1G"] || [platform isEqualToString:@"iPod Touch 2G"] || [platform isEqualToString:@"iPod Touch 3G"] || [platform isEqualToString:@"iPod Touch 4G"] || [platform containsString:@"iPad"] || [platform isEqualToString:@"iPad Simulator"]) {
+        return iPhone4Size;
+    }
+    else if ([platform containsString:@"iPhone 5"] || [platform isEqualToString:@"iPod Touch 5G"] || [platform isEqualToString:@"iPod Touch 6G"] || [platform isEqualToString:@"iPhone Simulator"]) {
+        return iPhone5Size;
+    }
+    else if ([platform isEqualToString:@"iPhone 6"] || [platform isEqualToString:@"iPhone 6S"] || [platform isEqualToString:@"iPhone 7"]) {
+        return iPhone6Size;
+    }
+    else if ([platform isEqualToString:@"iPhone 6 Plus"] || [platform isEqualToString:@"iPhone 6S Plus"] || [platform isEqualToString:@"iPhone 7 Plus"]) {
+        return iPhone6PlusSize;
+    }
+    else {
+        return Simulator;
     }
 }
 
