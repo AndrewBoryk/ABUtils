@@ -162,6 +162,11 @@
     
     // 'colorWithHexString' function is a very useful function. Currently, there is no easy way to use Hex strings to declare UIColors. This function accepts a 6-letter hex string (don't use the shortcut hex strings) and returns the UIColor for that string.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hexFieldChanged) name:UITextFieldTextDidChangeNotification object:self.hexField];
+    self.colorPreview.layer.cornerRadius = 2.5f;
+    self.colorPreview.layer.borderWidth = 1.0f;
+    self.colorPreview.layer.borderColor = [ABUtils colorWithHexString:@"000000"].CGColor; // Black border
+    
     //*** SEE APP FOR EXAMPLE ***//
     
     // These functions provide a 1 line means to determine the model of a device
@@ -181,4 +186,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)hexFieldChanged {
+    
+    /// Changes the color of the preview based on the hex string inputted by the user
+    self.colorPreview.backgroundColor = [ABUtils colorWithHexString: self.hexField.text];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return NO;
+}
 @end
