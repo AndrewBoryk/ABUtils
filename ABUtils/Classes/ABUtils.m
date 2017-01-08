@@ -190,7 +190,7 @@
 + (NSString *)ordinalNumber:(NSInteger)number {
     NSString *suffix = [ABUtils ordinalSuffixFromInt:number];
     
-    return [NSString stringWithFormat:@"%i%@", number, suffix];
+    return [NSString stringWithFormat:@"%li%@", (long)number, suffix];
 }
 
 + (NSDate *)endOfDay:(NSDate *)date
