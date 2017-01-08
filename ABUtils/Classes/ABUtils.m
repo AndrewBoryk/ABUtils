@@ -189,8 +189,8 @@
 
 + (NSString *)ordinalNumber:(NSInteger)number {
     NSString *suffix = [ABUtils ordinalSuffixFromInt:number];
-    
-    return [NSString stringWithFormat:@"%li%@", (long)number, suffix];
+    int numberInt = (int)number;
+    return [NSString stringWithFormat:@"%i%@", numberInt, suffix];
 }
 
 + (NSDate *)endOfDay:(NSDate *)date
