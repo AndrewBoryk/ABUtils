@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABUtils'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Utils that can be used in any project, to reduce the amount of repetitive code by providing users with useful pre-written functions.'
 
 # This description is used to generate tags and improve search results.
