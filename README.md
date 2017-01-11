@@ -7,7 +7,7 @@
 
 ## Description
 
-ABUtils is a library which provides pre-written functionality. This makes it easier to develop cleaner code by removing the need for repetitive code, as well as easier to get started without having to re-write code between projects.
+ABUtils is a library which provides pre-written functionality. This makes it easier to develop cleaner code by removing the need for repetitive code, as well as easier to get started without having to re-write code between projects. As demand increases for a function, it will be added.
 
 ## Example
 
@@ -66,7 +66,7 @@ IS_OS_9_OR_LATER
 IS_OS_10_OR_LATER
 ```
 
-
+***
 ### Conditional Functions
 
 The _'notNull'_ function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, _'isNull'_, if you are looking to determine that a variable is null or nil.
@@ -110,6 +110,7 @@ The last of the conditional functions is _'boolValue'_. This function is used to
 + (BOOL) boolValue: (id) value;
 ```
 
+***
 ### String Modification Functions
 
 There are several functions to modifying and cleaning strings:
@@ -138,7 +139,7 @@ There are several functions to modifying and cleaning strings:
 + (NSString *)removeSpaces: (NSString *) text;
 ```
 
-
+***
 ### Time Functions
 
 The _'timeZone'_ function quickly returns the time zone of the user in string format
@@ -175,7 +176,7 @@ The _'differenceMet'_ function is used to determine if a number of specified day
 + (BOOL)differenceMet: (NSDate *) time days: (int) days;
 ```
 
-
+***
 ### Number Functions
 
 The following functions return a string formatted from a number:
@@ -195,7 +196,7 @@ The following functions return a string formatted from a number:
 + (NSString *) commaFormatNumber: (NSNumber *)value;
 ```
 
-
+***
 ### UI Functions
 
 _'colorWithHexString'_ function is a very useful function. Currently, there is no easy way to use Hex strings to declare UIColors. This function accepts a 6-letter hex string (don't use the shortcut hex strings) and returns the UIColor for that string.
@@ -222,7 +223,7 @@ The following functions provide a 1 line means to determine the model of a devic
 + (ModelSizeType)modelTypeSize;
 ```
 
-
+***
 ### Image/Video Functions
 
 The following functions provide tools in editing and encoding media:
