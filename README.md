@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/ABUtils.svg?style=flat)](http://cocoapods.org/pods/ABUtils)
 [![Platform](https://img.shields.io/cocoapods/p/ABUtils.svg?style=flat)](http://cocoapods.org/pods/ABUtils)
 
-## Features
+## Description
 
 ABUtils is a library which provides pre-written functionality. This makes it easier to develop cleaner code by removing the need for repetitive code, as well as easier to get started without having to re-write code between projects.
 
