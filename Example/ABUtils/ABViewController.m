@@ -45,7 +45,7 @@
     
 #pragma mark - Conditional Oriented Function Examples
     
-    // the 'notNull' function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNull', if you are looking to determine that a variable is null or nil.
+    // The 'notNull' function is helpful in determining whether an object is valid, that is, the value is not null or nil. In Swift, you can determine if a variable is nil using '!'. This is not available in Objective-C, so this function can be used in its place. It has a sister-function, 'isNull', if you are looking to determine that a variable is null or nil.
     NSNull *null = [NSNull new];
     if ([ABUtils notNull:null]) {
         [ABUtils print:@"False" tag:@"isNull"];
@@ -78,21 +78,6 @@
         [ABUtils print:@"True" tag:@"notBlank"];
     }
     
-    // There are several functions to modifying and cleaning strings:
-    // 1. removeSpecialCharacters: Removes characters from the string that are not an upper or lowercase letter
-    // 2. trimWhiteSpace: Trims white space from the ends of a string, such as ' ' and '\n'
-    // 3. trimMultiSpace: Trims multispace from a string, and turns '\n\n' into '\n' as well as '  ' into ' '
-    // 4. trimWhiteAndMultiSpace: An option which combines the previous two functions
-    // 5. removeSpaces: Removes all spaces and new lines from a string
-    
-    [ABUtils print:[ABUtils removeSpecialCharacters:testString] tag:@"removeSpecialCharacters"];
-    [ABUtils print:[ABUtils trimWhiteSpace:testString] tag:@"trimWhiteSpace"];
-    [ABUtils print:[ABUtils trimMultiSpace:testString] tag:@"trimMultiSpace"];
-    [ABUtils print:[ABUtils trimWhiteAndMultiSpace:testString] tag:@"trimWhiteAndMultiSpace"];
-    [ABUtils print:[ABUtils removeSpaces:testString] tag:@"removeSpaces"];
-    
-    [ABUtils printString:@"\n\n"];
-    
     // To determine if an email is a valid format, you can use the 'isValidEmail' function.
     
     testString = @"john.smith@gmailcom";
@@ -113,7 +98,7 @@
         [ABUtils print:@"Invalid" tag:testString];
     }
     
-    // The last of the conditional functions is 'boolValue'. This function is used to parse the bool value out of an NSString or NSNumber.
+    // To determine if an email is a valid format, you can use the 'isValidEmail' function. This function uses a regex to ensure that the email is in the proper format and only contains only valid email address characters.
     
     testString = @"1";
     
@@ -126,16 +111,33 @@
     
     [ABUtils printString:@"\n\n"];
     
+#pragma mark - String Modification Oriented Function Examples
+    
+    // There are several functions to modifying and cleaning strings:
+    // 1. removeSpecialCharacters: Removes characters from the string that are not an upper or lowercase letter
+    // 2. trimWhiteSpace: Trims white space from the ends of a string, such as ' ' and '\n'
+    // 3. trimMultiSpace: Trims multispace from a string, and turns '\n\n' into '\n' as well as '  ' into ' '
+    // 4. trimWhiteAndMultiSpace: An option which combines the previous two functions
+    // 5. removeSpaces: Removes all spaces and new lines from a string
+    
+    [ABUtils print:[ABUtils removeSpecialCharacters:testString] tag:@"removeSpecialCharacters"];
+    [ABUtils print:[ABUtils trimWhiteSpace:testString] tag:@"trimWhiteSpace"];
+    [ABUtils print:[ABUtils trimMultiSpace:testString] tag:@"trimMultiSpace"];
+    [ABUtils print:[ABUtils trimWhiteAndMultiSpace:testString] tag:@"trimWhiteAndMultiSpace"];
+    [ABUtils print:[ABUtils removeSpaces:testString] tag:@"removeSpaces"];
+    
+    [ABUtils printString:@"\n\n"];
+    
 #pragma mark - Time Oriented Function Examples
     
-    // The 'timeZone' quickly returns the time zone of the user
+    // The 'timeZone' function quickly returns the time zone of the user in string format
     
     [ABUtils print:[ABUtils timeZone] tag:@"Time Zone"];
     
     // The 'ordinalSuffixFromInt' function returns the proper ordinal suffix for an int (ie. st, rd, nd)
-    // The 'orinalNumber' function simplifies the previous function, by supplying the ordinal suffix, and appending it to the number, returning a full string
+    // The 'ordinalNumberString' function simplifies the previous function, by supplying the ordinal suffix, and appending it to the number, returning a full string
     [ABUtils printString:[NSString stringWithFormat:@"1%@ Place", [ABUtils ordinalSuffixFromInt: 1]]];
-    [ABUtils printString:[NSString stringWithFormat:@"%@ Place", [ABUtils ordinalNumber: 2]]];
+    [ABUtils printString:[NSString stringWithFormat:@"%@ Place", [ABUtils ordinalNumberString: 2]]];
     
     [ABUtils printString:@"\n\n"];
     
@@ -189,7 +191,7 @@
     
     [ABUtils print:[ABUtils platformType] tag:@"platformType"];
     [ABUtils print:[ABUtils modelTypeString] tag:@"modelTypeString"];
-    NSLog(@"modelTypeSize: %ld", [ABUtils modelTypeSize]);
+    NSLog(@"modelTypeSize: %ld", (long)[ABUtils modelTypeSize]);
 
 #pragma mark - Image/Video Oriented Function Examples
     

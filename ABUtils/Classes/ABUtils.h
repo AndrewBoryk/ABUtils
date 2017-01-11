@@ -18,6 +18,7 @@
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define IS_OS_9_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define IS_OS_10_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
 
 // Type of rotation that should be applied to an AVAsset to return it to the proper orientation
 typedef NS_ENUM(NSInteger, OrientationType) {
@@ -61,7 +62,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 #pragma mark - Dev Oriented
 
 /// Print dictionary with a tag, using CFShow
-+ (void) print: (id) dictionary tag: (NSString *) tag;
++ (void) print: (id) object tag: (NSString *) tag;
 
 /// Print a string, using CFShow
 + (void) printString: (NSString *) string;
@@ -83,6 +84,18 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 /// Returns true if the object is not just spaces or blank, otherwise returns false
 + (BOOL)notBlank: (NSString *) text;
+
+/*!
+ * @brief Determines if email is valid format
+ * @param string email that is passed in
+ * @return true if email is valid format, false otherwise
+ */
++ (BOOL)isValidEmail: (NSString *)string;
+
+/// Determines bool value for a NSString or NSNumber
++ (BOOL) boolValue: (id) value;
+
+#pragma mark - String Modification Oriented
 
 /*!
  * @brief Removes special characters from a string (%,#,&, etc.)
@@ -107,16 +120,6 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
  */
 + (NSString *)removeSpaces: (NSString *) text;
 
-/*!
- * @brief Determines if email is valid format
- * @param string email that is passed in
- * @return true if email is valid format, false otherwise
- */
-+ (BOOL)isValidEmail: (NSString *)string;
-
-/// Determines bool value for a NSString or NSNumber
-+ (BOOL) boolValue: (id) value;
-
 #pragma mark - Time Oriented
 
 /*!
@@ -129,12 +132,12 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 + (NSString *)ordinalSuffixFromInt:(NSInteger)number;
 
 /// Returns the number in string format with its proper ordinal suffix (ie. 5th, 1st, 2nd)
-+ (NSString *)ordinalNumber:(NSInteger)number;
++ (NSString *)ordinalNumberString:(NSInteger)number;
 
-// Returns the NSDate for the end of date received
+/// Returns the NSDate for the end of date received
 + (NSDate *)endOfDay:(NSDate *)date;
 
-// Returns the NSDate for the end of tomorrow
+/// Returns the NSDate for the end of tomorrow
 + (NSDate *)endOfTomorrow;
 
 /**
@@ -148,7 +151,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 #pragma mark - Number Oriented
 
-/// Return decimal string for the number, with commas
+/// Returns decimal string for the number, with commas
 - (NSString *) decimalNumber: (NSNumber *)value;
 
 /// Returns int in comma format
@@ -159,7 +162,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 #pragma mark - UI Oriented
 
-/// Returns a UIColor for a hex value
+/// Returns a UIColor for a hex string value
 + (UIColor *)colorWithHexString:(NSString*)hex;
 
 /// Returns the platform type of the user's phone (ie. iPhone 5S)
@@ -173,7 +176,7 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 
 #pragma mark - Image/Video Oriented
 
-// Send image, and returns same image scaled to 1080px and rotated accordingly
+/// Send image, and returns same image scaled to 1080px and rotated accordingly
 + (UIImage *)scaleAndRotateImage:(UIImage *)image;
 
 /// Generated a black and white image from the image received
@@ -185,13 +188,13 @@ typedef NS_ENUM(NSInteger, ModelSizeType) {
 /// Generates a saturated image from the image received
 + (UIImage *) generateSaturatedImage: (UIImage *) image;
 
-// Encodes image to Base 64 for Backend
+/// Encodes image to Base 64 for Backend
 + (NSString *)encodeToBase64String:(UIImage *)image;
 
-// Encodes video to Base 64 for Backend
+/// Encodes video to Base 64 for Backend
 + (NSString *)encodeVideoToBase64String:(NSURL *)videoURL;
 
-// Provides the orientation transformation for reorienting videos
+/// Provides the orientation transformation for reorienting videos
 + (CGAffineTransform) reorient: (OrientationType)orientation size: (CGSize)size;
 
 @end
