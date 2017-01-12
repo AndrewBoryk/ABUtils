@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Utils that can be used in any project, to reduce the amount of repetitive code by providing users with useful pre-written functions. As demand increases for a function, it will be added.
+ABUtils is a library which provides pre-written functionality. This makes it easier to develop cleaner code by removing the need for repetitive code, as well as easier to get started without having to re-write code between projects. As demand increases for a function, it will be added.
                        DESC
 
   s.homepage         = 'https://github.com/andrewboryk/ABUtils'
