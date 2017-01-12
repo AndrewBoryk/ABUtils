@@ -1,6 +1,7 @@
-# ABUtils
+<p align="center">
+  <img src="https://github.com/AndrewBoryk/ABUtils/blob/master/ABUtilsLogo.png?raw=true" alt="ABUtils custom logo"/>
+</p>
 
-[![CI Status](http://img.shields.io/travis/Andrew Boryk/ABUtils.svg?style=flat)](https://travis-ci.org/Andrew Boryk/ABUtils)
 [![Version](https://img.shields.io/cocoapods/v/ABUtils.svg?style=flat)](http://cocoapods.org/pods/ABUtils)
 [![License](https://img.shields.io/cocoapods/l/ABUtils.svg?style=flat)](http://cocoapods.org/pods/ABUtils)
 [![Platform](https://img.shields.io/cocoapods/p/ABUtils.svg?style=flat)](http://cocoapods.org/pods/ABUtils)
