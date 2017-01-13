@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+
+summary: Utils that can be used in any project, to reduce the amount of repetitive code by providing users with useful pre-written functions.
+tags: [iOS,ABMediaView,ABUtils,developer, Andrew Boryk, iPhone, app, library]
